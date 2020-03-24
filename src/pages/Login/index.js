@@ -18,7 +18,7 @@ export default function Login() {
       })
 
       login(response.data.token, response.data.user)
-      
+      console.log(response.data)
       window.location.href = '/'
       
     } catch (error) {
