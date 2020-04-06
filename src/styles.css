@@ -1,11 +1,13 @@
 /*** CSS RESET ***/
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,500,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: 'Heebo', sans-serif;
     font-size: 16px;
     color: #002743;
     font-weight: 400;

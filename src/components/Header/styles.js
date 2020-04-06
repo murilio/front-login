@@ -6,6 +6,7 @@ export const Container = styled.header`
     padding: 25px 10px;
     position: relative;
     transition: all 0.3s;
+    z-index: 9;
 
     .content {
         display: flex;
@@ -43,7 +44,7 @@ export const Container = styled.header`
 
         .menuOpen {
             height: 115px;
-            padding: 20px 0;
+            /* padding: 20px 0; */
         }
 
     }

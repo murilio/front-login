@@ -1,10 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
-import { isAuthenticated } from './service/auth'
+import { isAuthenticated } from './services/auth'
 
 // paginas
 import Login from './pages/Login'
+import Register from './pages/Register'
+import Profile from './pages/Profile'
 import Home from './pages/Home'
 import Product from './pages/Product'
 
@@ -24,8 +26,10 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            <PrivateRoute exact path="/" component={ Home } />
             <Route path="/login" component={ Login } />
+            <Route path="/register" component={ Register } />
+            <PrivateRoute exact path="/" component={ Home } />
+            <PrivateRoute path="/perfil" component={ Profile } />
             <PrivateRoute path="/products" component={ Product } />
         </Switch>
     </BrowserRouter>

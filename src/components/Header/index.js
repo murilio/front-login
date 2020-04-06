@@ -2,28 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { Container } from './styles';
 import { Link } from 'react-router-dom'
 
+import { getUser } from '../../services/auth'
+import api from '../../services/api'
+
 import Logo from '../../assets/images/logo512.png'
 
-import api from '../../service/api'
-import { profile } from '../../service/auth'
+export default function Header({ valueCart }) {
 
-export default function Header() {
+    const USER_ID = getUser()
 
+    const [ cart, setCart ] = useState(0)
     const [ menuOpen, setMenuOpen ] = useState('')
     const [ botaoMenu, setBotaoMenu ] = useState('')
     const [ className, setClassName ] = useState('')
-    const [ cart, setCart ] = useState(0)
-
-    async function loadCart() {
-        try {
-            const response = await api.get(`/cart/${user_id}`)
-            setCart(response.data.length)
-        } catch (error) {
-            if(error) {
-                setCart(0)
-            }
-        }
-    }
 
     function handleOpenMenu() {
         setMenuOpen(!menuOpen)
@@ -38,12 +29,15 @@ export default function Header() {
         handleBotaoMenu()
     }
 
-    const user_id = profile().id
+    async function loadCart(user_id) {
+        const res = await api.get(`/cart/${user_id}`)
+        setCart(res.data.count)
+    }
 
     useEffect(() => {
         window.onscroll = () => handleScroll()
-        loadCart()
-    })
+        loadCart(USER_ID)
+    }, [USER_ID])
 
     function handleScroll () {
         if (document.documentElement.scrollTop > 150) {
@@ -64,10 +58,9 @@ export default function Header() {
             <div className={ menuOpen ? 'menu menuOpen' : 'menu' }>
                 <nav>
                     <ul>
-                        <li><Link to="/">Home</Link></li>
                         <li><Link to="/products">Produtos</Link></li>
-                        <li><Link to="/#">Carrinho ({cart})</Link></li>
-                        <li><Link to="/perfil">Perfil</Link></li>
+                        <li><Link to="/carrinho">Carrinho ({valueCart ? valueCart : cart })</Link></li>
+                        <li><Link to="#">Perfil</Link></li>
                     </ul>
                 </nav>
             </div>
