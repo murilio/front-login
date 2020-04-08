@@ -46,13 +46,14 @@ export const Container = styled.main`
 
       button {
         border: 0;
-        background-color: #d4edda;
-        color: #155724;
+        color: #721c24;
+        background-color: #f8d7da;
         font-size: 13px;
         padding: 7px 15px;
         cursor: pointer;
         border-radius: 3px;
         text-transform: uppercase;
+        width: 100%;
         transition: all 0.3s;
 
         &:hover{

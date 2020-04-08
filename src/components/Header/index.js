@@ -30,7 +30,7 @@ export default function Header({ valueCart }) {
     }
 
     async function loadCart(user_id) {
-        const res = await api.get(`/cart/${user_id}`)
+        const res = await api.get(`/carrinho/${user_id}`)
         setCart(res.data.count)
     }
 
@@ -58,9 +58,10 @@ export default function Header({ valueCart }) {
             <div className={ menuOpen ? 'menu menuOpen' : 'menu' }>
                 <nav>
                     <ul>
-                        <li><Link to="/products">Produtos</Link></li>
+                        <li><Link to="/">Inicio</Link></li>
+                        <li><Link to="/products">Adicionar produtos</Link></li>
                         <li><Link to="/carrinho">Carrinho ({valueCart ? valueCart : cart })</Link></li>
-                        <li><Link to="#">Perfil</Link></li>
+                        <li><Link to="/perfil">Perfil</Link></li>
                     </ul>
                 </nav>
             </div>

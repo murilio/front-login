@@ -8,6 +8,7 @@ export const Container = styled.main`
   .card {
     margin: 10px;
     max-width: 380px;
+    max-height: 200px;
     width: 100%;
     background-color: #fff;
     padding: 10px;
@@ -53,6 +54,7 @@ export const Container = styled.main`
         cursor: pointer;
         border-radius: 3px;
         text-transform: uppercase;
+        width: 100%;
         transition: all 0.3s;
 
         &:hover{

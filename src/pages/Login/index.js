@@ -21,10 +21,13 @@ export default function Login() {
   async function handleSubmit(e) {
     e.preventDefault()
 
+    const data = {
+      email,
+      password
+    }
+
     try {
-      const res = await api.post('/login', {
-        email, password
-      })
+      const res = await api.post('/login', data)
 
       login(res.data.token, res.data.user.id)
       history.push('/')
