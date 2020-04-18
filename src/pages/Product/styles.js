@@ -7,22 +7,6 @@ export const Container = styled.form`
   margin: 0 auto;
   padding: 0 10px;
 
-  button {
-    height: 35px;
-    width: 100%;
-    border: 0;
-    margin-top: 20px;
-    color: #fff;
-    background-color: #002743;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: all 0.2s;
-    
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
   .content-form {
     display: flex;
     flex-wrap: wrap;
@@ -61,10 +45,6 @@ export const Container = styled.form`
     margin-top: 100px;
     padding: 0;
     min-height: calc(100vh - 260px);
-
-    button {
-      width: 200px;
-    }
 
     .content-form {
       .item-file {

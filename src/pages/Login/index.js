@@ -6,6 +6,8 @@ import { login } from '../../services/auth'
 
 import shop from '../../assets/images/login.jpg'
 import logo from '../../assets/images/logo512.png'
+import SubmitButton from '../../components/ButtonSubmit'
+
 import { Container } from './styles'
 
 export default function Login() {
@@ -81,7 +83,7 @@ export default function Login() {
             marginBottom: 10,
             marginTop: -20
           }}>{error}</span>
-          <input className="inputsubmit" type="submit" value="Entrar"/>
+          <SubmitButton title="Logar" time="5000"/>
         </form>
       </section>
       <img className="cart" src={shop} alt="shop do site" />

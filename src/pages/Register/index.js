@@ -5,6 +5,8 @@ import api from '../../services/api'
 
 import shop from '../../assets/images/register.jpg'
 import logo from '../../assets/images/logo512.png'
+import SubmitButton from '../../components/ButtonSubmit'
+
 import { Container } from './styles'
 
 export default function Register() {
@@ -125,7 +127,7 @@ export default function Register() {
             marginBottom: 10,
             marginTop: -20
           }}>{error}</span>
-          <input className="inputsubmit" type="submit" value="enviar" />
+          <SubmitButton title="Registrar" time="10000" />
         </form>
       </section>
       <img className="cart" src={shop} alt="shop do site" />

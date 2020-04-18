@@ -8,6 +8,7 @@ export const Container = styled.main`
   .card {
     margin: 10px;
     max-width: 380px;
+    height: 200px;
     width: 100%;
     background-color: #fff;
     padding: 10px;

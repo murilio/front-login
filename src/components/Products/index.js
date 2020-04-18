@@ -45,11 +45,11 @@ export default function Home() {
       <div className="card" key={produto.id}>
           <img src={produto.filename} alt={produto.description}/>
           <div className="conteudo">
-          <h1>{ produto.name }</h1>
-          <p>{ produto.description }</p>
-          <p><span>Valor: R$</span> { produto.value }</p>
-          <p><span>Categoria: </span> { produto.category }</p>
-          <button onClick={() => adicionarCarrinho(produto.id)}>Adicionar ao carrinho</button>
+            <h1>{ produto.name }</h1>
+            <p>{ produto.description }</p>
+            <p><span>Valor: R$</span> { produto.value }</p>
+            <p><span>Categoria: </span> { produto.category }</p>
+            <button onClick={() => adicionarCarrinho(produto.id)} >Adicionar ao carrinho</button>
           </div>
       </div>
       ))

@@ -44,7 +44,6 @@ export const Container = styled.header`
 
         .menuOpen {
             height: 115px;
-            /* padding: 20px 0; */
         }
 
     }

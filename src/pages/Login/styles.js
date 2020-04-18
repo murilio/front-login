@@ -35,21 +35,6 @@ export const Container = styled.main `
         width: 100%;
         margin-bottom: 30px;
       }
-
-      .inputsubmit {
-        height: 35px;
-        width: 100%;
-        border: 0;
-        color: #fff;
-        background-color: #002743;
-        border-radius: 2px;
-        cursor: pointer;
-        transition: all 0.2s;
-        
-        &:hover {
-          opacity: 0.8;
-        }
-      }
       
       .content-form {
         width: 100%;

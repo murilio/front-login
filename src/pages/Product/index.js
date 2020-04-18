@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom'
 
 import api from '../../services/api'
 
 // components
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import ButtonSubmit from '../../components/ButtonSubmit'
 
 // style
 import { Container } from './styles'
@@ -18,6 +20,8 @@ export default function Product() {
   const [ category, setCategory ] = useState('')
   const [ file, setFile ] = useState('')
   const [ error, setError ] = useState('')
+
+  const history = useHistory()
 
   async function handlesubmit(e) {
     e.preventDefault()
@@ -50,6 +54,7 @@ export default function Product() {
 
     try {
       await api.post('/products', formData, config)
+      history.push('/')
 
     } catch (error) {
       console.log(error)
@@ -122,7 +127,9 @@ export default function Product() {
               />
             </div>
           </div>
-          <button type="submit">Cadastrar produto</button>
+          <ButtonSubmit 
+            title="Cadastrar Produto"
+          />
           {/* <img src={logoteste} alt="" /> */}
         </Container>
       <Footer/>
