@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
   margin-top: 0;
@@ -55,7 +55,7 @@ export const Container = styled.main`
         text-transform: uppercase;
         transition: all 0.3s;
 
-        &:hover{
+        &:hover {
           opacity: 0.8;
         }
       }
@@ -66,6 +66,6 @@ export const Container = styled.main`
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 100px;
-    min-height: calc(100vh - 260px)
+    min-height: calc(100vh - 260px);
   }
-`;
+`

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export const Container = styled.main `
+export const Container = styled.main`
   height: 100vh;
   width: 100vw;
   background-color: #fff;
@@ -8,7 +8,7 @@ export const Container = styled.main `
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   .cart {
     display: none;
   }
@@ -35,7 +35,7 @@ export const Container = styled.main `
         width: 100%;
         margin-bottom: 30px;
       }
-      
+
       .content-form {
         width: 100%;
         margin-bottom: 35px;
@@ -63,7 +63,7 @@ export const Container = styled.main `
         }
 
         .inputTitle {
-          padding: 0 20px
+          padding: 0 20px;
         }
 
         input {
@@ -74,9 +74,7 @@ export const Container = styled.main `
           height: 50px;
         }
       }
-
     }
-
   }
 
   @media only screen and (min-width: 768px) {
@@ -87,14 +85,11 @@ export const Container = styled.main `
     }
 
     section {
-        width: 48%;
+      width: 48%;
 
-        form {
-            width: 60%;
-        }
-
+      form {
+        width: 60%;
+      }
     }
-
   }
-
-`;
+`
