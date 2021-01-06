@@ -1,94 +1,106 @@
 import styled from 'styled-components'
 
 export const Container = styled.main`
-  height: 100vh;
-  width: 100vw;
-  background-color: #fff;
-
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
 
-  .cart {
-    display: none;
+  @media only screen and (min-width: 768px) {
+    flex-direction: row-reverse;
   }
 
-  section {
+  div.left {
     width: 100%;
-    background-color: #fff;
-    height: 100%;
-
+    height: 35%;
+    padding: 5% 15%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    form {
+    > img {
+      max-height: 300px;
+      height: 100%;
+    }
+
+    @media only screen and (min-width: 768px) {
+      width: 60%;
+      height: 100%;
+      padding: 0;
+    }
+  }
+
+  div.right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 5%;
+
+    @media only screen and (min-width: 768px) {
+      width: 40%;
+      justify-content: space-around;
+    }
+
+    div.content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
-      width: 90%;
-
-      .logo {
-        max-width: 200px;
-        width: 100%;
-        margin-bottom: 30px;
+      > h1 {
+        font-size: 32px;
+        text-align: center;
       }
 
-      .content-form {
-        width: 100%;
-        margin-bottom: 35px;
-        position: relative;
+      > p {
+        font-size: 20px;
+        text-align: center;
+        margin: 20px 0 0 0;
+        color: #777;
+      }
 
-        .title {
-          position: absolute;
-          left: 10px;
-          display: block;
-          top: 16px;
-          background-color: #fff;
-          padding: 0 10px;
-          transition: all 0.2s;
-          font-size: 13px;
-        }
+      @media only screen and (min-width: 768px) {
+        height: 100%;
+      }
+    }
 
-        .titletop {
-          top: -10px;
-          padding: 0 20px;
-          font-size: 15px;
-        }
+    > form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+      padding: 5% 0;
 
-        .input {
-          padding: 0 85px;
-        }
+      div.form {
+        height: 100%;
 
-        .inputTitle {
-          padding: 0 20px;
-        }
-
-        input {
-          width: 100%;
-          background-color: #fff;
-          border: solid 1px #aaa;
-          border-radius: 2px;
+        > input {
+          border: solid 1px #555;
           height: 50px;
+          margin: 7px 0;
+          color: #777;
+          border-radius: 9px;
+          padding: 0 10px;
+          font-size: 14px;
+          width: 100%;
         }
       }
-    }
-  }
 
-  @media only screen and (min-width: 768px) {
-    .cart {
-      display: block;
-      max-height: 100vh;
-      width: 52%;
-    }
-
-    section {
-      width: 48%;
-
-      form {
-        width: 60%;
+      > button {
+        border-radius: 9px;
+        color: #777;
+        background-color: #fff;
+        border: 0;
+        width: 100%;
+        min-height: 55px;
+        font-weight: 800;
+        font-size: 16px;
+        cursor: pointer;
       }
     }
   }

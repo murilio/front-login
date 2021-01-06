@@ -1,7 +1,16 @@
 import React from 'react'
+
+// rotas
 import Router from './routes'
-import './styles.css'
 
-const App = () => <Router />
+// global style
+import GlobalStyle from './styles/Global'
 
-export default App
+export default function App() {
+  return (
+    <>
+      <GlobalStyle />
+      <Router />
+    </>
+  )
+}
